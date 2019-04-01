@@ -9,10 +9,12 @@ public class Main {
         
         Producer p=new Producer(q);
         Consumer c=new Consumer(q);
-        p.run();
-        c.run();
         
+        Thread prod=new Thread(p);
+        prod.start();
         
+        Thread cons=new Thread(c);
+        cons.start();
         
         
     }

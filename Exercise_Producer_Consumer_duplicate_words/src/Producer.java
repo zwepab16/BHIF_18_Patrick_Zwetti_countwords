@@ -37,9 +37,12 @@ public class Producer implements Runnable{
                            text+=st;
                         }
                         
-                        Book b=new Book(file.getName(), text.replaceAll("[^ a-zA-Z]", ""));
-                    
+                        Book b=new Book(file.getName(),text);
+                        synchronized(q){
                         q.put(b);
+                        q.notifyAll();
+                        
+                        }
                     }catch(Exception ex){
                         
                     }
