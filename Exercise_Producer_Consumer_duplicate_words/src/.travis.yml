@@ -1,0 +1,3 @@
+language: java
+python: oracle-jdk8
+script: pytest
