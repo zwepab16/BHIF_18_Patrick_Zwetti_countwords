@@ -10,7 +10,8 @@ public class Book {
 
     public Book(String inputfilename, String text) {
         this.inputfilename = inputfilename;
-        this.text = text.replaceAll("[^ A-Za-z]", "");
+        this.text = text.replaceAll("[^ 0-9A-Za-z]", "");
+        this.text.replaceAll(" +", " ");
       
     }
     

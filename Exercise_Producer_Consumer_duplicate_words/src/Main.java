@@ -9,6 +9,7 @@ public class Main {
         
         Producer p=new Producer(q);
         Consumer c=new Consumer(q);
+        Consumer c2=new Consumer(q);
         
         Thread prod=new Thread(p);
         prod.start();
@@ -16,6 +17,8 @@ public class Main {
         Thread cons=new Thread(c);
         cons.start();
         
+        Thread cons2=new Thread(c2);
+        cons2.start();
         
     }
 
